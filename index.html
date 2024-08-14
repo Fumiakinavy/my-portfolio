@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Stylish Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #000;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.8);
+            padding: 20px 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        nav ul li a:hover {
+            color: #gold;
+        }
+        .hero {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('/api/placeholder/1200/800') no-repeat center center;
+            background-size: cover;
+        }
+        .hero h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.2em;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        section {
+            padding: 80px 0;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 40px;
+            color: #gold;
+        }
+        .projects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        .project {
+            background-color: #111;
+            padding: 20px;
+            border-radius: 5px;
+            transition: transform 0.3s ease;
+        }
+        .project:hover {
+            transform: translateY(-5px);
+        }
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .project h3 {
+            margin-top: 0;
+        }
+        .project p {
+            margin-bottom: 0;
+        }
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .skill {
+            background-color: #222;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        footer {
+            background-color: #111;
+            text-align: center;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">ホーム</a></li>
+                <li><a href="#about">自己紹介</a></li>
+                <li><a href="#projects">プロジェクト</a></li>
+                <li><a href="#skills">スキル</a></li>
+                <li><a href="#contact">お問い合わせ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>私のポートフォリオへようこそ</h1>
+                <p>クリエイティブで革新的なソリューションを提供するウェブデベロッパーです。</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                <h2>自己紹介</h2>
+                <p>私は5年以上の経験を持つウェブデベロッパーです。最新のテクノロジーを駆使して、美しく機能的なウェブサイトやアプリケーションを制作することに情熱を注いでいます。常に新しい挑戦を求め、クライアントの期待を超えるソリューションを提供することを目指しています。</p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <div class="container">
+                <h2>プロジェクト</h2>
+                <div class="projects">
+                    <div class="project">
+                        <img src="/api/placeholder/300/200" alt="プロジェクト1">
+                        <h3>プロジェクト1</h3>
+                        <p>革新的なウェブアプリケーションの開発プロジェクト。React.jsとNode.jsを使用。</p>
+                    </div>
+                    <div class="project">
+                        <img src="/api/placeholder/300/200" alt="プロジェクト2">
+                        <h3>プロジェクト2</h3>
+                        <p>レスポンシブデザインのコーポレートウェブサイト。HTML5, CSS3, JavaScriptを使用。</p>
+                    </div>
+                    <div class="project">
+                        <img src="/api/placeholder/300/200" alt="プロジェクト3">
+                        <h3>プロジェクト3</h3>
+                        <p>Eコマースプラットフォームの開発。PHP, MySQL, Laravelフレームワークを使用。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <div class="container">
+                <h2>スキル</h2>
+                <div class="skills">
+                    <span class="skill">HTML5</span>
+                    <span class="skill">CSS3</span>
+                    <span class="skill">JavaScript</span>
+                    <span class="skill">React.js</span>
+                    <span class="skill">Node.js</span>
+                    <span class="skill">PHP</span>
+                    <span class="skill">MySQL</span>
+                    <span class="skill">Git</span>
+                    <span class="skill">Responsive Design</span>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <div class="container">
+                <h2>お問い合わせ</h2>
+                <p>プロジェクトのご相談やお問い合わせは、以下のメールアドレスまでお気軽にご連絡ください。</p>
+                <p><a href="mailto:contact@example.com" style="color: #gold;">contact@example.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
